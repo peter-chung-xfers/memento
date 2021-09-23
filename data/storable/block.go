@@ -146,7 +146,7 @@ func (sb *Block) enhance() error {
 		log.Error(err)
 		return err
 	}
-	sb.BlockCreationTime = DatetimeToJSONUnix(time.Unix(timestamp, 0))
+	sb.BlockCreationTime = DatetimeToJSONUnix(time.Unix(0, timestamp))
 
 	// -- computed
 	sb.NumberOfTxs = int32(len(b.Transactions))

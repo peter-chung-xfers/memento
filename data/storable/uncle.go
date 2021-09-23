@@ -153,7 +153,7 @@ func (ug *UnclesGroup) buildStorableUncle(uncle types.Block, index int32) (*Uncl
 		log.Error(err)
 		return nil, err
 	}
-	u.BlockCreationTime = DatetimeToJSONUnix(time.Unix(timestamp, 0))
+	u.BlockCreationTime = DatetimeToJSONUnix(time.Unix(0, timestamp))
 
 	return u, nil
 }

@@ -99,7 +99,7 @@ func (t *TxsGroup) enhance() error {
 		log.Error(err)
 		return err
 	}
-	t.blockCreationTime = DatetimeToJSONUnix(time.Unix(timestamp, 0))
+	t.blockCreationTime = DatetimeToJSONUnix(time.Unix(0, timestamp))
 
 	for index, tx := range t.RawBlock.Transactions {
 		storableTx, err := t.buildStorableTx(tx, t.RawReceipts[index])

@@ -67,7 +67,7 @@ func (t *DatetimeToJSONUnix) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	*t = DatetimeToJSONUnix(time.Unix(unix, 0).UTC())
+	*t = DatetimeToJSONUnix(time.Unix(0, unix).UTC())
 
 	return nil
 }
